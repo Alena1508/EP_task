@@ -1,0 +1,110 @@
+$roundness: 6px;
+$sliderHeight: 6px;
+$handleSize: 20px;
+$valueWidth: 90px;
+$labelMarkerHeight: 12px;
+
+.rangeslider {
+  position: relative;
+  height: $sliderHeight;
+  border-radius: $roundness;
+  width: 100%;
+  background-color: #dddddd;
+  box-shadow: none;
+  &:before{
+    width: calc(100% - 20px);
+    height: 6px;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 0;
+    background-image: url("../img/rangePattern.png");
+    background-repeat: repeat;
+    background-size: 11.22% 6px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  &:after{
+    width: 10px;
+    height: 6px;
+    content: '';
+    display: block;
+    position: absolute;
+    right:8px;
+    top: 0;
+    background: #ddd;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &__handle {
+    transition: background-color .2s;
+    box-sizing: border-box;
+    width: $handleSize;
+    height: $handleSize;
+    border-radius: 100%;
+    background: #fff;
+    touch-action: pan-y;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    top: -7px !important;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.27);
+    &:after {
+      display: none;
+    }
+    &__value {
+      box-sizing: border-box;
+      width: $valueWidth;
+      text-align: center;
+      border-radius: $roundness;
+      left: -($valueWidth/2 - $handleSize/2);
+      top: -45px;
+      position: absolute;
+      font: 16px/20px "Neris-Black";
+      color: $text-color;
+
+      &:after {
+        max-width: 110px;
+        margin: 60px auto 0;
+        font: 18px/20px "Neris-Light";
+        text-align: center;
+        text-transform: uppercase;
+        color: #bdbdbd;
+        content: '\2190 DRAG \2192';
+        display: block;
+      }
+    }
+  }
+
+  &__fill {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    background: $track-bg;
+    border-radius: $roundness;
+  }
+
+  &__labels {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    &__label {
+      font-size: 0.75em;
+      position: relative;
+      padding-top: 15px;
+    }
+  }
+
+  // active state
+  &.rangeslider--active {
+    .rangeslider__handle {
+      background: #ececec;
+    }
+  }
+}

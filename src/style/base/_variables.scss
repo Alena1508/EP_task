@@ -1,0 +1,32 @@
+//colors
+$main-bg:#fff;
+$text-color:#434149;
+$active-color:#ffc000;
+$range-start:#fdf177;
+$range-middle: #ffbc00;
+$range-end: #E74C3C;
+$range-default:#dddddd;
+
+
+//range
+$line-c: #fff; //lines
+$line-w: 4px;
+
+$track-u: 125px;
+$track-w: 9*$track-u;
+$track-h: 6px;
+$track-s: 100%;
+$track-l: 45%;
+$track-bg: linear-gradient(to right, $range-start 0%, $range-middle 50%, $range-end 100%);
+$track-lines: linear-gradient(90deg,
+  $line-c $line-w, transparent $line-w) -$line-w/2 50%;
+
+$thumb-bg: #a7a6a2;
+
+$ruler-fs: .875;
+$ruler-c: #000;
+
+
+
+//fonts
+$fa-font-path: "../../bower_components/font-awesome/fonts";

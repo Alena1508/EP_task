@@ -1,0 +1,15 @@
+.pagination {
+  margin-bottom: 17px;
+  &__item {
+    text-transform: uppercase;
+    text-align: center;
+    line-height:22px;
+    cursor: pointer;
+    min-height: 65px;
+  }
+  .slick-current {
+    color: $active-color;
+    border-bottom: 4px solid $active-color;
+  }
+
+}

@@ -1,0 +1,24 @@
+.range {
+  padding:120px 0 140px;
+  &__title {
+    text-align: center;
+    font: 45px/48px 'Neris-Black';
+    color: $text-color;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    @media screen and (max-width: 768px){
+      font-size: 25px;
+      line-height:27px;
+    }
+  }
+  &__period {
+    text-align: center;
+    color: $active-color;
+    margin:0 0 100px;
+  }
+  &__wrapper {
+    @media screen and (max-width: 1400px){
+      padding: 0 30px;
+    }
+  }
+}

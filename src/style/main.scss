@@ -1,0 +1,21 @@
+@import "base/normalize";
+@import "base/variables";
+@import "base/fonts";
+@import "base/main";
+@import "base/mixins";
+@import "../../bower_components/font-awesome/scss/font-awesome";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+@import "../../bower_components/rangeslider.js/dist/rangeslider.css";
+
+
+
+@import "layout/products";
+@import "layout/pagination";
+@import "layout/counter";
+@import "layout/description";
+@import "layout/range";
+@import "layout/rangeslider";
+
+
+

@@ -1,0 +1,74 @@
+.description {
+  margin-top: 100px;
+  &__info {
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    @media screen and (max-width: 1024px){
+      flex-wrap: wrap;
+    }
+  }
+  &__img {
+    @media screen and (max-width: 1024px){
+      margin-bottom: 30px;
+    }
+  }
+  &__link {
+    display: block;
+    padding:30px;
+    text-decoration: none;
+    color: $text-color;
+    &:first-child {
+      margin-bottom: 18px;
+    }
+    &.active {
+      border: 1px dashed $text-color;
+      border-radius: 20px;
+      .description__title {
+        border: none;
+        color: $active-color;
+      }
+    }
+  }
+  &__title {
+    display: inline-block;
+    font-size: 25px;
+    line-height:27px;
+    margin-bottom: 30px;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed $text-color;
+  }
+  &__text {
+    font: 19px/23px "Neris-Light";
+  }
+  .slick-next{
+    font-size: 16px;
+    line-height: 18px;
+    right: 45%;
+    color: $text-color;
+    @media screen and (max-width: 768px){
+      right:35%;
+    }
+  }
+
+  .slick-prev {
+    left: 45%;
+    font-size: 16px;
+    line-height: 18px;
+    color: $text-color;
+    @media screen and (max-width: 768px){
+      left:35%;
+    }
+  }
+  .slick-arrow:before {
+    display: none;
+  }
+  .slick-arrow {
+    top: -108px;
+    transition-duration: 0.2s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+.products {
+  width: 100%;
+  background: url("../img/productsBg.png") no-repeat;
+  background-size: cover;
+  padding:100px 0 40px;
+  &__title {
+    text-align: center;
+    font: 50px/52px 'Neris-Black';
+    color: $text-color;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    @media screen and (max-width: 768px){
+      font-size: 30px;
+      line-height:32px;
+    }
+  }
+}
